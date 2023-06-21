@@ -1,0 +1,231 @@
+/*commun à toutes les pages*/
+/* rgb(143, 137, 137) rgb(134, 128, 128) darkgrey whitesmoke */
+* {
+   color: whitesmoke;
+}
+body {
+   background-color: darkgrey;
+}
+header {
+   font-size: 1.2em;
+}
+
+/*index*/
+.logo{
+   display: block;
+   margin: 0 auto;
+   width: 80px;
+   height: auto;
+ }
+ .under_logo_text_container{
+   text-align: center;
+   color: whitesmoke;
+   text-align: center;
+}
+
+/*principalement commun à toutes les pages*/
+.main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 80vh;
+}
+.imgs_container{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(auto-fit, minmax(210px, 1fr)); ;
+   column-gap: 10px;
+   row-gap: 40px;
+   height: 70vh;
+}
+.img{
+   display: block;
+   padding: 10px 10px;
+   background-color: rgb(143, 137, 137);
+   border-radius: 15px;
+}
+.img_cell{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+.img_cell img{
+   max-width: 100%;
+   height: auto;
+}
+.footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 15px;
+   font-size: 1em;
+   color: black;
+}
+
+/*index*/
+.btn_img_container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 25px;
+}
+.btn_images{
+   padding: 10px 20px;
+   text-align: center;
+   font-size: 1.2em;
+   background-color: black;
+   border-radius: 10px;
+}
+.btn_images:hover {
+   background-color: rgb(143, 137, 137);
+}
+
+/*mur/image*/
+.btn_left_container{
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   margin-top: 5px;
+}
+.button{
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   margin-top: 10px;
+   background-color: black;
+   border-radius: 10px;
+   padding: 10px 20px;
+   font-size: 0.8em;
+}
+.button:hover{
+   background-color: rgb(143, 137, 137);
+ }
+.btn_left{
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   margin-top: 10px;
+   background-color: black;
+   border-radius: 10px;
+   padding: 10px 20px;
+   font-size: 1em;
+}
+.btn_left:hover {
+   background-color: rgb(143, 137, 137);
+ }
+.under_index_text_container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+}
+.like_container{
+   position: absolute; 
+   bottom: -26px;
+   right:auto;
+   display: flex; 
+   align-items: center;
+}
+.fa-regular.fa-thumbs-up {
+   margin-right: 5px;
+   font-size: 1rem;
+   color: whitesmoke;
+ }
+ .fa-solid .fa-thumbs-up{
+   margin-right: 5px;
+   font-size: 1rem;
+   color: whitesmoke;
+ }
+.like_count{
+   text-align: center;
+   font-size: 1rem;
+   color: whitesmoke;
+}
+
+
+/*image*/
+.img_container{
+   margin-top: 5px;
+}
+.img_cell_unique{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.text_img{
+   text-align: center;
+}
+.img_cell_preview{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 5px;
+}
+
+
+.img_next:hover {
+   opacity: 0.5;
+   transition: opacity 0.3s ease-in-out;
+
+}
+.img_previous:hover {
+   opacity: 0.5;
+   transition: opacity 0.3s ease-in-out;
+
+}
+.img_previous:hover::before{
+   position: relative;
+   left: 50%;
+   content: "Previous";
+   font-size: 1em;
+   color: whitesmoke;
+}
+.img_next:hover::before{
+   position: relative;
+   left: 50%;
+   content: "Next";
+   font-size: 1em;
+   color: whitesmoke;
+}
+.img_preview{
+   margin-right: 5px;
+}
+
+/*description formulaire*/
+.commentary-form{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 2rem;
+   height: 80vh;
+}
+.commentary-form form{
+   position: relative;
+   width: 400px;
+}
+form input, 
+form textarea{
+   width: 100%;
+   padding: 20px;
+   background: rgb(134, 128, 128);
+   color: whitesmoke;
+   margin-top: 5px;
+   border-radius: 5px;
+}
+form input::placeholder, 
+form textarea::placeholder{
+    color: whitesmoke; 
+}
+.send-btn{
+   display: inline-block;
+   background: rgb(134, 128, 128);
+   color: whitesmoke;
+   font-size: 1em;
+   margin-top: 10px;
+   border-radius: 5px;
+   text-transform: uppercase;
+}
+.send-btn:hover{
+   background: rgb(143, 137, 137);
+}

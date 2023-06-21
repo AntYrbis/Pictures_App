@@ -1,0 +1,1 @@
+Un site web permettant de naviguer sur un mur d'images, d'accéder à une version plus grande des images en miniatures sur ce site et d'ajouter un commentaire dessous une image depuis ce même mur.

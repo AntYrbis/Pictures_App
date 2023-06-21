@@ -1,0 +1,69 @@
+<!-- pageTitle, imagesList, likesList, idList, nomsPhotographes, prenomsPhotographes -->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="../public/style.css">
+        <script src="https://kit.fontawesome.com/db5f104521.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="btn_left_container">
+                <a href="index" class="button" >Index</a>
+                <!-- <button class="button" id="button_layout">Layout</button> -->
+                <form class="forms" action="/tri-orientations" method="post">
+                    <label for="tri_o">Orientation :</label>
+                    <select class="trieur" name="tri_o" id="tri_o">
+                        <option value='portrait'>Portrait</option>
+                        <option value='paysage'>Paysage</option>
+                    </select>
+                    <input class="button_form" type="submit" value="Trier">
+                  </form>
+                <form class="forms"  action="/tri-images" method="post">
+                    <label for="tri">Trier par :</label>
+                    <select class="trieur" name="tri" id="tri">
+                        <option value='date'>Date</option>
+                        <option value='likes'>Likes</option>
+                    </select>
+                    <input class="button_form" type="submit" value="Trier">
+                </form>
+                <form class="forms"  action="/tri-photographes" method="post">
+                <label for="tri_p">Photographes :</label>
+                <select class="trieur" name="tri_p" id="tri_p">
+                    <option value="0">Tous</option>
+                    <% for (let i = 0; i < prenomsPhotographes.length; i++) { %>
+                        <option value="<%= (i+1) %>"><%=nomsPhotographes[i]%>  <%=prenomsPhotographes[i]%></option>
+                    <%} %>
+                </select>
+                <input class="button_form" type="submit" value="Trier">
+                </form>
+            </div>
+            <a href="../public/image-description.html" class="btn" style="text-decoration: none;">Comment</a>
+            <p class="under_index_text_container">Le Mur d'Images</p>
+        </header>
+        <main>
+            <div class="imgs_container"> 
+                <% for (let i = 0; i < imagesList.length; i++) { %>
+                    <% const fichierSmallImage = imagesList[i].split('.')[0] + '_small.jpg'; %>
+                    <% const img = '<img src="/public/' + fichierSmallImage + '" />'; %>
+                    <a href="/image/<%= (i+1) %>"><img src="/public/<%=fichierSmallImage%>" /></a> 
+                    <div class="img_cell"> 
+                        <div class="like_container">
+                            <% if ( likesList[i] == 0){ %>
+                                <a href="../j-aime/<%= idList[i] %>"><i class="fa-regular fa-thumbs-up"></i></a>
+                            <% } else {%>
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            <%} %>
+                            <span class="like_count"><%= likesList[i] %></span>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </main>
+        <script src="/public/mur.js"></script>
+    </body>
+</html>

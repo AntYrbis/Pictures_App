@@ -1,0 +1,36 @@
+<!-- pageTitle, imagesList, namesList , commentsList, nomsList, prenomsList  -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="../public/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-LvfG9z7+uIg6fZ/hQzNj5+5vbVw8ynP+kBAdV+aY/1zI6G8x6W5U2ywBf5F5ztI7" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="btn_left_container">
+                <a href="../mur-images" class="button">Mur</a>
+            </div>
+        </header>
+        <main>
+            <div class="img_container">
+                <div class="img_cell_unique">  
+                    <img class="img" src="/public/<%= imagesList[id] %>" width="400" />
+                </div>
+                <div class="text_img">
+                    <h1><%= namesList[id] %></h1>
+                    <p>De <%= nomsList[id] %> <%= prenomsList[id] %></p>
+                    <% if (commentsList[id]) { %>
+                        <p><%= commentsList[id].toString() %></p>
+                    <% } else { %>
+                        <p>Pas de description.</p>
+                    <% } %>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">site réalisé en mai 2023</footer>
+    </body>
+</html>

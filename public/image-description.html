@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <header>
+        <div class=" btn_left_container ">
+        <a href="/mur-images" class="button"> Mur </a>
+        </div>
+        <p class="under_index_text_container">Ajout d'un commentaire</p>
+    </header>
+    <main>
+        <div class="commentary-form">
+            <form id="form" action="/image-description" method="POST">
+                <input type="text" id="number" name="number" placeholder="Number of the picture" required>
+                <input type="text" id="commentaire" name="commentaire" placeholder="Enter your comment" required>
+                <input type="submit" value="Send" class="send-btn">
+            </form>
+        </div>
+    </main>
+    <footer class="footer">site réalisé en janvier 2023</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/*commun à toutes les pages*/
+/* rgb(143, 137, 137) rgb(134, 128, 128) darkgrey whitesmoke */
+
+* {
+   color: whitesmoke;
+}
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0;
+   padding: 20px;
+ }
+header {
+   font-size: 1.2em;
+}
+ 
+.titre {
+text-align: center;
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.tri-boutons {
+text-align: left;
+margin-bottom: 10px;
+}
+
+.mur-images {
+text-align: center;
+}
+
+.mur-images img {
+width: 30%;
+height: auto;
+object-fit: cover;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+.mur-images img:nth-child(3n) {
+margin-right: 0;
+}
+
+/*index*/
+.logo{
+   display: block;
+   margin: 0 auto;
+   width: 80px;
+   height: auto;
+ }
+ .under_logo_text_container{
+   text-align: center;
+   color: whitesmoke;
+   text-align: center;
+}
